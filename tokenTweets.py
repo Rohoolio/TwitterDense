@@ -32,12 +32,6 @@ emoticon_re = re.compile(r'^' + emoticons_str + '$', re.VERBOSE | re.IGNORECASE)
 # This defines the function tokenise which will execute the regex and return all the tokens created by it from the
 # subject text.
 def tokenize(s):
-    """
-        Args:
-            :param s: string value
-        Returns:
-            Tokens object that contains created tokens from token regex.
-        """
     return tokens_re.findall(s)
 
 
@@ -45,13 +39,6 @@ def tokenize(s):
 # regex on the tokens. After that is complete it checks if the text is in lowercase and if so it changes the token
 # value in the regex to be lowercase and then runs it.
 def preprocess(s, lowercase=False):
-    """
-    Args:
-        :param s: Brought in from tokenize
-        :param lowercase: Defaults the lower case to false
-    Returns:
-        Tokens object that contains created tokens from emoticon regex.
-    """
     tokens = tokenize(s)
     if lowercase:
         tokens = [token if emoticon_re.search(token) else token.lower() for token in tokens]
@@ -60,12 +47,6 @@ def preprocess(s, lowercase=False):
 # This defines the run process which will take in the tweettext. It will try to create a column to put the processed
 # tokens in called val[0] and passes if it it fails.
 def run(text):
-    """
-        Args:
-            :param text: The tweet rows from the data.
-        Returns:
-            The processed tweets.
-        """
     try:
         processed = [val[0] for val in tokenize(text.lower())]
     except:
