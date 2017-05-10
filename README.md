@@ -71,3 +71,12 @@ GitHub
 If you want to see the whole code then go to:
 
 https://github.com//Rohoolio/TwitterDense
+
+------------------
+Dependencies
+------------------
+This project was dependent on certain python libraries such as:
+
+Pandas- http://pandas.pydata.org/
+Tweepy - https://github.com/tweepy/tweepy
+NLTK - http://www.nltk.org/
