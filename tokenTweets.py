@@ -1,3 +1,14 @@
+"""
+ * tokenTweets 1.0 10 May 2017
+ *
+ * Copyright (c) School of Geography.
+ * University of Leeds, Leeds, West Yorkshire, UK. LS2 9JT.
+ * All rights reserved.
+ *
+ * This code is under the Attribution 4.0 International CC BY 4.0 License.
+ * For details, please see the https://creativecommons.org/licenses/by/4.0/legalcode.
+"""
+
 import json
 import re
 import csv
